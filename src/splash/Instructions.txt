@@ -1,0 +1,31 @@
+
+How to Play Rock Paper Scissors Lizard Spock
+	as defined by Dr. Sheldon Cooper
+
+	"Oh, I know.  Let's play Rock Paper Scissors Lizard Spock.
+
+	It's very simple...
+
+	Scissors cuts Paper.  Paper covers Rock.  Rock crushes Lizard.  Lizard poisons Spock.  Spock smashes Scissors.  Scissors decapitates Lizard.  Lizard eats Paper.  Paper disproves Spock.  Spock vaporizes Rock, and, as it always has, Rock crushes Scissors."
+
+	In tabular form... (result of throwing left column vs. top row (-Loss; +Win))
+       =================================
+	            | R | P | S | L | K |
+	---------------------------------
+	 [R]ock     |   | - | + | + | - |
+	 [P]aper    | + |   | - | - | + |
+	 [S]cissors | - | + |   | + | - |
+	 [L]izard   | - | + | - |   | + |
+	 Spoc[K]    | + | - | + | - |   |
+	=================================
+
+	HOW TO PLAY
+	1) Press the key corresponding to what you want to throw:
+		[R] = Rock
+		[P] = Paper
+		[S] = Scissors
+		[L] = Lizard
+		[K] = Spock
+	2) After you throw, the computer opponent will randomly throw.
+	3) You either win, lose, or draw, and the results are logged.
+	4) Press [X] to exit, [C] to clear game data, and [I] for these instructions
