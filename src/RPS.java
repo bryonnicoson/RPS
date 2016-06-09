@@ -3,11 +3,13 @@ import java.util.*;
 
 public class RPS {
 
+    // declare game-wide variables
+
     // game data multidimensional array
     public static int[][] gamesArray = new int[5][5];
 
     // data file
-    public static String dataFile = new String("RPSData.data");
+    public static String dataFile = new String("RPS.data");
 
     // variables for storing game actions, outcomes
     public static String userThrow = "";
@@ -22,10 +24,19 @@ public class RPS {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
 
+    // methods follow
+
     // here we go
     public static void main(String[] args) {
 
-        // multi-color splash screens!
+        splash();
+        readData();
+        menu();
+
+    }
+
+    // multi-colored splash screens !
+    public static void splash() {
         System.out.print("\033\143");
         System.out.print(ANSI_RED);
         showTextFile("Rock.asc");
@@ -47,9 +58,6 @@ public class RPS {
         showTextFile("Spock.asc");
         pause(1);
         System.out.print(ANSI_RESET);
-
-        readData();
-        menu();
     }
 
     // method to read and display contents of text file (.asc, .txt)
@@ -232,6 +240,8 @@ public class RPS {
         menu();
 
     }
+
+    // computer randomly throws
     public static String opponentThrow() {
         Random randomGenerator = new Random();
         int randomInt = randomGenerator.nextInt(5);
@@ -256,6 +266,7 @@ public class RPS {
         return compThrow;
     }
 
+    // determine outcome
     public static String determineOutcome(String userThrow, String compThrow) {
 
         // compare values of thrown strings, increment appropriate element of gamesArray, and return string outcome
@@ -388,6 +399,7 @@ public class RPS {
         return(outcome);
     }
 
+    // read RPS.data file to gamesArray
     public static void readData(){
 
         try {
@@ -401,6 +413,7 @@ public class RPS {
 
     }
 
+    // save gamesArray to RPS.data file
     public static void saveData(){
 
         try {
@@ -412,6 +425,8 @@ public class RPS {
         }
 
     }
+
+    // pause & prompt user to press Enter to continue
     public static void promptEnterKey(){
         System.out.println("Press \"ENTER\" to continue...");
         try {
